@@ -3,7 +3,8 @@ runtime: python3
 build:
   commands:
     build:
-      - pip install streamlit boto3
+      - python -m pip install --upgrade pip
+      - python -m pip install boto3 streamlit
 run:
   command: streamlit run app.py --server.port 8080 --server.address 0.0.0.0
   network:
